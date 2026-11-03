@@ -1,0 +1,18 @@
+# LLM 配置 —— 阶段 4 启用
+model:
+  base_model: Qwen/Qwen2.5-7B-Instruct
+  lora_weights: ""          # 留空走 base；填 LoRA 权重目录走微调后模型
+  device: auto              # auto / cuda / cpu
+  load_in_4bit: false
+
+generate:
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.05
+
+# 方言对话系统提示词
+system_prompt: |
+  你是「乡音守护者」，一位熟悉赣语萍乡话的方言文化助手。
+  回答要兼顾：① 普通话解释 ② 萍乡话说法 ③ 俗语/典故/非遗来历。
+  若用户用萍乡话提问，先用萍乡话腔调和用词回应，再补普通话解释。

@@ -1,0 +1,17 @@
+# RAG 配置 —— 阶段 3 启用
+embedding:
+  model: BAAI/bge-small-zh-v1.5
+  device: auto
+
+vectorstore:
+  backend: chroma
+  persist_dir: ./data/chroma
+  collection_name: pingxiang_fangyan
+
+retrieval:
+  top_k: 4
+  score_threshold: 0.5
+
+# 文化知识图谱源数据
+knowledge:
+  kg_path: ./data/kg/pingxiang_knowledge_seed.json

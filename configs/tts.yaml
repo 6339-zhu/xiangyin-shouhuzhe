@@ -1,0 +1,15 @@
+# TTS 配置 —— 阶段 2 启用
+model:
+  backend: piper            # piper / coqui
+  voice: zh_CN-huayan-medium
+  device: auto              # auto / cuda / cpu
+
+# 萍乡话发音词典（字 → 普通话参考读音 + 萍乡话拟音）
+# 阶段 2 由 modules/dataset 生成
+dictionary:
+  path: ./data/dictionary/pingxiang_pron.csv
+  enabled: true
+
+prosody:
+  speaking_rate: 1.0
+  pitch_shift: 0

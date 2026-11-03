@@ -1,0 +1,48 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ===== 环境与密钥 =====
+.env
+.env.local
+
+# ===== 大文件：模型 / 语料 =====
+models/*
+!models/.gitkeep
+data/corpus/*
+!data/corpus/.gitkeep
+data/transcripts/*
+!data/transcripts/.gitkeep
+data/chroma/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+
+# ===== OS =====
+Thumbs.db
+.DS_Store
+
+# ===== 测试与构建 =====
+.pytest_cache/
+htmlcov/
+dist/
+build/
+
+# ===== 日志 =====
+logs/*
+!logs/.gitkeep

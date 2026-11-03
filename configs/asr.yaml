@@ -1,0 +1,22 @@
+# ASR 配置 —— 阶段 1 启用
+model:
+  name: large-v3          # tiny / base / small / medium / large-v3
+  backend: faster-whisper   # faster-whisper / openai-whisper
+  device: auto             # auto / cuda / cpu
+  compute_type: default     # default / int8 / float16
+
+inference:
+  language: zh
+  # 给模型的初始提示，帮助它识别萍乡话夹普通话的语域
+  initial_prompt: "以下是萍乡话普通话夹杂的普通话转写文本。"
+  vad_filter: true
+  beam_size: 5
+
+finetune:
+  method: peft-lora         # peft-lora / full-ft
+  r: 16
+  lora_alpha: 32
+  target_modules: [q_proj, v_proj]
+  learning_rate: 1.0e-4
+  epochs: 5
+  train_batch_size: 8

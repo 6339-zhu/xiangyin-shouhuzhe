@@ -1,0 +1,42 @@
+# ===== Web 框架 =====
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+streamlit==1.39.0
+
+# ===== 配置与工具 =====
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+PyYAML==6.0.2
+loguru==0.7.2
+
+# ===== 数据处理 =====
+numpy==1.26.4
+pandas==2.2.3
+SoundFile==0.12.1
+librosa==0.10.2
+
+# ===== ASR（阶段 1 启用）=====
+# faster-whisper==1.0.3
+# openai-whisper==20240930
+# torch>=2.1
+
+# ===== TTS（阶段 2 启用）=====
+# TTS==0.22.0            # Coqui TTS
+# piper-tts==1.2.0
+
+# ===== LLM / RAG（阶段 3-4 启用）=====
+# transformers==4.45.0
+# peft==0.13.0
+# datasets==3.0.1
+# accelerate==0.34.1
+# bitsandbytes==0.43.3  # Windows 需自备编译版
+# langchain==0.3.3
+# langchain-community==0.3.0
+# chromadb==0.5.11
+# sentence-transformers==3.1.1
+
+# ===== 测试 =====
+pytest==8.3.3
+httpx==0.27.2
